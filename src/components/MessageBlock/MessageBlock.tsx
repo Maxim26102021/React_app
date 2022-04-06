@@ -1,12 +1,14 @@
+import './MessageBlock.scss'
 import Messages from "../Messages/Messages";
-import React from "react";
+import React, {useMemo, useRef, useState} from "react";
 
-const MessageBlock = (props:Array<any>) => {
+const MessageBlock = ({data} :any) => {
+
+
     return (
-        <div className="App-message">{props.data.map((el: any) => {
-            return <Messages data={el}/>
+        <div className="App-message">{data.map((el: any) => {
+            return <Messages data={el} key={el.text.toString()}/>
         })}</div>
-
     )
 }
 

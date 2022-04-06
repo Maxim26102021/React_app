@@ -10,3 +10,9 @@
 body {
   background-color: #282c34;
 }
+
+.height-block {
+  height: 200px;
+  max-height: 200px;
+  display: flex;
+}
